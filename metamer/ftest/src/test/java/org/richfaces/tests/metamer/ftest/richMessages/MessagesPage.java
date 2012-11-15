@@ -1,6 +1,6 @@
-/*******************************************************************************
+/**
  * JBoss, Home of Professional Open Source
- * Copyright 2010-2012, Red Hat, Inc. and individual contributors
+ * Copyright 2012, Red Hat, Inc. and individual contributors
  * by the @authors tag. See the copyright.txt in the distribution for a
  * full listing of individual contributors.
  *
@@ -18,33 +18,19 @@
  * License along with this software; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
- *******************************************************************************/
-package org.richfaces.tests.metamer.ftest.a4jPush;
+ */
+package org.richfaces.tests.metamer.ftest.richMessages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.richfaces.tests.metamer.ftest.webdriver.MetamerPage;
+import org.richfaces.tests.metamer.ftest.richMessage.MessagePage;
 
 /**
- *  WebDriver
- * @author <a href="mailto:jjamrich@redhat.com">Jan Jamrich</a>
- * @version $Revision$
+ * @author <a href="mailto:jstefek@redhat.com">Jiri Stefek</a>
  */
-public class TwoPushPage extends MetamerPage{
+public class MessagesPage extends MessagePage {
 
-    @FindBy(css="input[id$=performPushEvent1]")
-    public WebElement push1Btn;
-
-    @FindBy(css="input[id$=performPushEvent2]")
-    public WebElement push2Btn;
-
-    @FindBy(css="input[type=checkbox][id$=enablePush1]")
-    public WebElement pushEnabledChckBox;
-
-    @FindBy(css="span[id$=outputDate]")
-    public WebElement output1;
-
-    @FindBy(css="span[id$=outputDate2]")
-    public WebElement output2;
-
+    // controls
+    @FindBy(css = "input[id$=generateMsgsBtn]")
+    WebElement generateMsgsBtn;
 }
